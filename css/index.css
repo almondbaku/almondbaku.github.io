@@ -1,4 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 body{
+    font-family: "Source Code Pro", monospace;
     background-color: #1e1e1e;
     color:azure;
+    overflow-x: hidden;
+    place-content: center;
+    display: grid;
+    text-align: center;
+    margin: 0;
+    min-height: 80vh;
+}
+.maichi1{
+    position: relative;
+    animation: maichi 2s ease 1 normal forwards;
+}
+@keyframes maichi{
+    0% {left: -1000px;}
+    100% {left: 0px; }
+}
+.delaytext{
+    font-size: xx-large;
+    position: relative;
+    opacity: 0;
+    animation: delaytext 2s ease 1 2s normal forwards;
+}
+@keyframes delaytext {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+hr.hrline{
+    position: relative;
+    opacity: 0;
+    place-content: start;
+    animation: hrline 2s ease 1 2s normal forwards;
+}
+@keyframes hrline {
+    0% {opacity: 0; width: 0%}
+    100% {opacity: 1; width: 100%}
+}
+.welcome{
+    opacity: 0;
+    position: relative;
+    animation: welcome 3s ease 1 3s normal forwards;
+}
+@keyframes welcome{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.WIP{
+    opacity: 0;
+    position: relative;
+    animation: WIP 4s ease 1 3.5s normal forwards;
+}
+@keyframes WIP{
+    0% {opacity: 0; top: 50%;}
+    100% {opacity: 1; top: 0%;}
 }
