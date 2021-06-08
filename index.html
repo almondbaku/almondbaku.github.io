@@ -10,16 +10,22 @@
 </head>
 <body>
     <div class="main">
-        <img class="maichi1" src="img/maichi.png" alt="maichi1">
-        <span><p class="delaytext">Hello. :^)</p></span>
-        <span><hr class="hrline"></span>
-        <span><p class="welcome">Welcome to my website!</p></span>
-        <br/>
-        <p class="WIP">Still work in progress... stay tuned...</p>
-    </div>
-    <div class="clock">
-        <div id="clock" class="display">00:00:00</div>
-    </div>
+        <div>
+            <img class="maichi1" src="img/maichi.png" alt="maichi1">
+            <span><p class="delaytext">Hello. :^)</p></span>
+            <span><hr class="hrline"></span>
+            <span><p class="welcome">Welcome to my website!</p></span>
+            <br/>
+            <p class="WIP">Still work in progress... stay tuned...</p>
+        </div>
+            <br/>
+        <div>
+            <button class="nextbutton"><span>>>></span></button>
+        </div>
+        <div class="clock">
+            <div id="clock" class="display">00:00:00</div>
+        </div>
+    </div> 
 
     <script>
         setInterval(clock, 500);
@@ -30,6 +36,17 @@
             var hr = time.getHours();
             document.getElementById("clock").innerHTML = hr + ':' + min + ':' + sec;
         }
+
+        
+        $(document).ready(function(){
+            $(".nextbutton").click(function(){
+                $(".main").fadeOut(1000);
+                setTimeout(
+                    function(){
+                        $(".main").fadeIn(1000);
+                    }, 2000);                
+            });
+        });
     </script>
 </body>
 </html>

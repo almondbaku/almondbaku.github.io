@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 body{
     font-family: "Source Code Pro", monospace;
     background-color: #1e1e1e;
@@ -13,11 +14,14 @@ body{
 }
 .maichi1{
     position: relative;
+    opacity: 0;
+    border-radius: 50%;
     animation: maichi 2s ease 1 normal forwards;
 }
 @keyframes maichi{
-    0% {left: -1000px;}
-    100% {left: 0px; }
+    0% {opacity: 0;left: -1000px;}
+    25% {opacity: 0;}
+    100% {opacity: 1;left: 0px; }
 }
 .delaytext{
     font-size: xx-large;
@@ -67,4 +71,30 @@ div.clock{
     font-size: xx-large;
     color: rgba(162, 219, 236, 0.993);
     letter-spacing: 2px;
+}
+.nextbutton{
+    display: inline-block;
+    border:none;
+    background-color: transparent ;
+    color: azure;
+    outline: none;
+    font-size: xx-large;
+    font-family: 'Nanum Gothic', sans-serif;
+    opacity: 75%;
+    position: relative;
+    cursor: pointer;
+    animation: nextbutton 2s ease 1 normal forwards;
+    transition: 0.2s;
+}
+@keyframes nextbutton{
+    from {opacity: 50%; transform: scaleX(1.5);}
+    to {opacity: 50%; transform: scaleX(1);}
+}
+.nextbutton:hover{
+    cursor: pointer;
+    animation: onhover 1s 1 normal forwards;
+}
+@keyframes onhover {
+    from {opacity: 50%; transform: scaleX(1);}
+    to {opacity: 50%; transform: scaleX(1.5);}
 }
